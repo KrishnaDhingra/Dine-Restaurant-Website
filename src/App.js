@@ -4,6 +4,7 @@ import logo from './images/logo.svg'
 import Features from './components/Features/features.js'
 import Highlights from './components/Highlights/highlights.js'
 import SpecialEvents from './components/Special_Events/special_events.js'
+import Reservation from './components/Reservation/reservation.js'
 
 const Body = styled.div`
   margin: 0;
@@ -111,6 +112,7 @@ function App() {
         <Features></Features>
         <Highlights></Highlights>
         <SpecialEvents></SpecialEvents>
+        <Reservation></Reservation>
     </div>
   );
 }

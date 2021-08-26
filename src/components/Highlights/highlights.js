@@ -5,26 +5,27 @@ import SalmonDesktop from '../../images/homepage/salmon-desktop-tablet.jpg'
 import ChocolateDesktop from '../../images/homepage/chocolate-desktop-tablet.jpg'
 
 const Body = styled.div`
-    margin: 0;
+    background-color: #111111;
+`
+const Inner = styled.div`
+
     box-sizing: border-box;
-    padding: 0px 10vw;
-    padding-top: 10vh;
     padding-bottom: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     font-family: 'Spartan', sans-serif;
-    min-width: 100%;
+    max-width: 1300px;
     min-height: 100vh;
     background-color: #111111;
+    margin: auto;
     gap: 8rem;
 
     @media (max-width: 1430px) {
         flex-direction: column;
         gap: 4rem;
   }
-
 `
 const LeftContainer = styled.div`
     display: flex;
@@ -124,46 +125,48 @@ function Highlights() {
 
     return (
         <Body>
-            <LeftContainer>
-                <LineCircle>
-                    <Line></Line>
-                    <Circle></Circle>
-                </LineCircle>
-                <Heading>A few highlights
-                    from our menu</Heading>
-                <Info>We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu is revamped every season.</Info>
-            </LeftContainer>
-            <RightContainer>
-                <First>
-                    <TopInfo>
-                        <LeftImage src={SalmonDesktop}></LeftImage>
-                        <div>
-                            <LeftHeading>Seared Salmon Fillet</LeftHeading>
-                            <LeftInfo>            Our locally sourced salmon served with a refreshing buckwheat summer salad.</LeftInfo>
-                        </div>
-                    </TopInfo>
-                    <Divider></Divider>
-                </First>
-                <Second>
-                    <TopInfo>
-                        <LeftImage src={BeefDesktop}></LeftImage>
-                        <div>
-                            <LeftHeading>Rosemary Filet Mignon</LeftHeading>
-                            <LeftInfo>Our prime beef served to your taste with a delicious choice of seasonal sides.</LeftInfo>
-                        </div>
-                    </TopInfo>
-                    <Divider></Divider>
-                </Second>
-                <Third>
-                    <TopInfo>
-                        <LeftImage src={ChocolateDesktop}></LeftImage>
-                        <div>
-                            <LeftHeading>Summer Fruit Chocolate Mousse</LeftHeading>
-                            <LeftInfo>Creamy mousse combined with summer fruits and dark chocolate shavings.</LeftInfo>
-                        </div>
-                    </TopInfo>
-                </Third>
-            </RightContainer>
+            <Inner>
+                <LeftContainer>
+                    <LineCircle>
+                        <Line></Line>
+                        <Circle></Circle>
+                    </LineCircle>
+                    <Heading>A few highlights
+                        from our menu</Heading>
+                    <Info>We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu is revamped every season.</Info>
+                </LeftContainer>
+                <RightContainer>
+                    <First>
+                        <TopInfo>
+                            <LeftImage src={SalmonDesktop}></LeftImage>
+                            <div>
+                                <LeftHeading>Seared Salmon Fillet</LeftHeading>
+                                <LeftInfo>            Our locally sourced salmon served with a refreshing buckwheat summer salad.</LeftInfo>
+                            </div>
+                        </TopInfo>
+                        <Divider></Divider>
+                    </First>
+                    <Second>
+                        <TopInfo>
+                            <LeftImage src={BeefDesktop}></LeftImage>
+                            <div>
+                                <LeftHeading>Rosemary Filet Mignon</LeftHeading>
+                                <LeftInfo>Our prime beef served to your taste with a delicious choice of seasonal sides.</LeftInfo>
+                            </div>
+                        </TopInfo>
+                        <Divider></Divider>
+                    </Second>
+                    <Third>
+                        <TopInfo>
+                            <LeftImage src={ChocolateDesktop}></LeftImage>
+                            <div>
+                                <LeftHeading>Summer Fruit Chocolate Mousse</LeftHeading>
+                                <LeftInfo>Creamy mousse combined with summer fruits and dark chocolate shavings.</LeftInfo>
+                            </div>
+                        </TopInfo>
+                    </Third>
+                </RightContainer>
+            </Inner>
 
         </Body>
     )

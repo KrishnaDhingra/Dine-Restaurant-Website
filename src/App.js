@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import logo from './images/logo.svg'
 import Features from './components/Features/features.js'
 import Highlights from './components/Highlights/highlights.js'
+import SpecialEvents from './components/Special_Events/special_events.js'
 
 const Body = styled.div`
   margin: 0;
@@ -109,6 +110,7 @@ function App() {
         </Body>
         <Features></Features>
         <Highlights></Highlights>
+        <SpecialEvents></SpecialEvents>
     </div>
   );
 }

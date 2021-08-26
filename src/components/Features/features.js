@@ -8,14 +8,13 @@ import LocallyImageTablet from '../../images/homepage/locally-sourced-tablet.jpg
 const Body = styled.div`
     margin: 0;
     box-sizing: border-box;
-    padding: 0px 10vw;
-    padding-top: 10vh;
     padding-bottom: 10vh;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     font-family: 'Spartan', sans-serif;
-    min-width: 100%;
+    max-width: 1300px;
+    margin: auto;
     min-height: 100vh;
 
     @media (max-width: 1430px) {

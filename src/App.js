@@ -1,10 +1,16 @@
 import './index.css'
 import styled from 'styled-components'
+import HeroImage from './images/homepage/hero-bg-desktop.jpg'
+import HeroImageTablet from './images/homepage/hero-bg-tablet.jpg'
+import HeroImageMobile from './images/homepage/hero-bg-mobile.jpg'
+import HeroImageMobile2x from './images/homepage/hero-bg-mobile@2x.jpg'
 import logo from './images/logo.svg'
 import Features from './components/Features/features.js'
 import Highlights from './components/Highlights/highlights.js'
 import SpecialEvents from './components/Special_Events/special_events.js'
 import Reservation from './components/Reservation/reservation.js'
+import Footer from './components/Footer/footer.js'
+import Book from './components/Book/book.js'
 
 const Body = styled.div`
   margin: 0;
@@ -15,16 +21,26 @@ const Body = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: #111111;
   font-family: 'Spartan', sans-serif;
   min-width: 100%;
   min-height: 100vh;
+  background-image: url(${HeroImage});
+  background-size: cover;
+  overflow-x: hidden;
+
   
   @media (max-width: 1430px) {
     padding: 0px 0px;
     gap: 3rem;
     justify-content: center;
     align-items: center;
+    padding-bottom: 4rem;
+  }
+  @media(max-width: 1330px){
+    background-image: url(${HeroImageTablet});
+  }
+  @media(max-width: 590px){
+    background-image: url(${HeroImageMobile});
   }
 
   .heading_container{
@@ -49,6 +65,16 @@ const Text = styled.p`
 const Logo = styled.img`
   width: 100px;
   height: 100%;
+
+  @media(max-width: 1330px){
+    margin-top: 30rem;
+  }
+  @media(max-width: 950px){
+    margin-top: 20rem;
+  }
+  @media(max-width: 500px){
+    margin-top: 12rem;
+  }
 `
 const Heading = styled.h1`
   color: white;
@@ -89,6 +115,12 @@ const Button = styled.button`
   border: 1px solid white;
   text-transform: uppercase;
   margin-top: 1rem;
+  transition: all 0.4s;
+
+  &:hover{
+      background-color: white;
+      color: black;
+  }
 
   @media (max-width: 1430px) {
     margin: auto;
@@ -113,6 +145,8 @@ function App() {
         <Highlights></Highlights>
         <SpecialEvents></SpecialEvents>
         <Reservation></Reservation>
+        <Footer></Footer>
+        {/* <Book></Book> */}
     </div>
   );
 }

@@ -81,9 +81,15 @@ const Button = styled.button`
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: 400;
-  width: 247px;
+  width: 253px;
   border: none;
-  
+  transition: all 0.4s;
+  border: 1.5px solid black;
+
+    &:hover{
+        background-color: white;
+        color: black;
+    }
 `
 
 

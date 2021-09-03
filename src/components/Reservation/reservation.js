@@ -29,7 +29,13 @@ const Button = styled.button`
     font-family: 'Spartan', sans-serif;
     font-size: 14px;
     letter-spacing: 1px;
+    transition: all 0.4s;
     font-weight: 400;
+
+    &:hover{
+        background-color: white;
+        color: black;
+    }
 `
 
 function Reservation() {

@@ -37,6 +37,8 @@ const Body = styled.div`
 
 const ImageContainer = styled.div`
     overflow: hidden;
+    background-color: transparent;
+    
     @media (max-width: 1430px) {
         content: url(${FamilyImageTablet});
     }
@@ -46,6 +48,8 @@ const Family = styled.img`
     flex-basis: 40%;
     width: 540px;
     height: 100%;
+    box-shadow: 0 7.5rem 10rem -5rem rgba(56, 66, 85, 0.5);
+
 
     @media (max-width: 1430px) {
         width: 500px;
@@ -55,6 +59,7 @@ const Family = styled.img`
 `
 const Locally = styled(Family)`
     transform: translateY(70px);
+    box-shadow: 0 7.5rem 10rem -5rem rgba(56, 66, 85, 0.5);
 
     @media (max-width: 1430px) {
         content: url(${LocallyImageTablet});
